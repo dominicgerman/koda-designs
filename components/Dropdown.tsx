@@ -1,10 +1,16 @@
 import { useState } from 'react'
-import ImageBox from './ImageBox'
 
-export default function Dropdown({ title, number, text }: any) {
+export default function Dropdown({
+  title,
+  number,
+  text,
+  children,
+  strong,
+  dropdownRef,
+  formRef,
+  isSent,
+}: any) {
   const [isOpen, setIsOpen] = useState(false)
-  const lorem =
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis animi atque, facere explicabo corporis rerum numquam possimus natus consectetur? Culpa eveniet tempore consectetur debitis illo, pariatur odio doloremque assumenda fugiat.'
 
   return (
     <section className="flex flex-col">
@@ -15,19 +21,37 @@ export default function Dropdown({ title, number, text }: any) {
             : 'flex border-black border-t-2'
         }
         onClick={() => setIsOpen(!isOpen)}
+        ref={dropdownRef}
       >
         <div className="px-4 font-mono mt-3 text-sm h-14">
           {number}
           <div className="polygon ml-1"></div>
         </div>
-        <p className="uppercase text-3xl font-optima self-center ml-12">
+        <p className="uppercase text-3xl font-optima self-center sm:ml-12">
           {title}
         </p>
       </div>
-      {isOpen ? (
-        <div className="max-w-xl self-center mt-16 font-mono">
+      {isOpen && !isSent ? (
+        <div
+          className="max-w-xl self-center mt-16 font-mono mx-7"
+          ref={formRef}
+        >
+          {strong ? <strong>{strong}</strong> : null}
           {text}
-          <ImageBox />
+          {children}
+        </div>
+      ) : null}
+      {isOpen && isSent ? (
+        <div
+          className="max-w-xl self-center mt-16 font-mono mx-7 flex flex-col items-center"
+          ref={formRef}
+        >
+          <strong>Thank you.</strong>
+          <br></br>
+          <p className="mb-44 text-center">
+            Your information has been submitted. We will get back to you within
+            one business day.
+          </p>{' '}
         </div>
       ) : null}
     </section>
