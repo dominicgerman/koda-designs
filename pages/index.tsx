@@ -63,7 +63,7 @@ export default function Home({ allPosts: edges }: any) {
         <title>Koda Designs</title>
         <meta name="description" content="UI/UX design + dev" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/dogfavicon.png" />
       </Head>
       <main>
         <div className="flex flex-col items-center gap-2.5 mt-8">
