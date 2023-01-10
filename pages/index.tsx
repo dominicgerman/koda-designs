@@ -3,12 +3,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import daphnes from '../public/daphnes-bar2.png'
+import urbanjungle from '../public/urbanjungle.png'
+import utah from '../public/utah.png'
+import sofar from '../public/sofar.png'
+import dominicgerman from '../public/dominicgerman.png'
 
 import { getAllPosts } from '../lib/api'
 
 import Dropdown from '../components/Dropdown'
 import ImageBox from '../components/ImageBox'
-import ProjectGrid from '../components/ProjectGrid'
 import ContactForm from '../components/ContactForm'
 
 export default function Home({ allPosts: edges }: any) {
@@ -94,12 +97,54 @@ export default function Home({ allPosts: edges }: any) {
             </Dropdown>
             <Dropdown title={titles[1]} number="002" text={textContent[1]}>
               <div className="grid grid-cols-2 gap-5 mt-16 mb-44">
-                <Image src={daphnes} alt="daphnes bar website" height={250} />
-                <Image src={daphnes} alt="daphnes bar website" height={250} />
+                <a
+                  href="https://dribbble.com/toriamia"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image src={sofar} alt="sofar website" height={250} />
+                </a>
+                <a
+                  href="https://dribbble.com/toriamia"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image src={utah} alt="utah website" height={250} />
+                </a>
+                <a
+                  href="https://dribbble.com/toriamia"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src={urbanjungle}
+                    alt="urban jungle website"
+                    height={250}
+                  />
+                </a>
               </div>
             </Dropdown>
             <Dropdown title={titles[2]} number="003" text={textContent[2]}>
-              <ProjectGrid></ProjectGrid>
+              <div className="grid grid-cols-2 gap-5 mt-16 mb-44">
+                <a
+                  href="https://daphnes.fly.dev"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image src={daphnes} alt="daphnes bar website" height={250} />
+                </a>
+                <a
+                  href="https://dominicgerman.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src={dominicgerman}
+                    alt="portfolio website"
+                    height={250}
+                  />
+                </a>
+              </div>
             </Dropdown>
             <Dropdown
               title={titles[3]}
