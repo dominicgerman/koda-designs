@@ -33,7 +33,7 @@ export default function Dropdown({
       </div>
       {isOpen && !isSent ? (
         <div
-          className="max-w-xl self-center mt-16 font-mono mx-7"
+          className="max-w-xl self-center mt-16 font-roboto mx-7"
           ref={formRef}
         >
           {strong ? <strong>{strong}</strong> : null}

@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import daphnes from '../public/daphnes-bar2.png'
+import daphnes from '../public/daphnes.png'
 import urbanjungle from '../public/urbanjungle.png'
 import utah from '../public/utah.png'
 import sofar from '../public/sofar.png'
@@ -72,7 +72,7 @@ export default function Home({ allPosts: edges }: any) {
             Designs
           </h1>
           <div className="mx-7 max-w-xl">
-            <p className="text-base font-roboto mb-12">
+            <p className="font-roboto mb-12">
               We are a small design + dev shop based in Chicago. <br></br>{' '}
               <br></br> With over eight years of experience building great
               products, our passion is using the best technology to bring your
