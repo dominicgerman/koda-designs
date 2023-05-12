@@ -7,6 +7,7 @@ import urbanjungle from '../public/urbanjungle.png'
 import utah from '../public/utah.png'
 import sofar from '../public/sofar.png'
 import dominicgerman from '../public/dominicgerman.png'
+import church from '../public/church.jpg'
 
 import { getAllPosts } from '../lib/api'
 
@@ -143,6 +144,13 @@ export default function Home({ allPosts: edges }: any) {
                     alt="portfolio website"
                     height={250}
                   />
+                </a>
+                <a
+                  href="https://npcovenant.kodadesigns.net"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image src={church} alt="church website" height={250} />
                 </a>
               </div>
             </Dropdown>
